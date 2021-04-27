@@ -1,26 +1,19 @@
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native';
-import { WebView } from 'react-native-webview';
+import WebView from 'react-native-webview';
 
 
 import Metrics from '../Themes/Metrics'
 
 
 
-export default function App(props, { route, navigation }) {
+export default function App({ route, navigation }) {
   const [options, setOptions] = useState([
 { title: 'National Suicide Prevention Hotline', website_uri:'https://suicidepreventionlifeline.org', id: '1' },
 { title: 'Veterans Crisis Line', website_uri:'https://www.veteranscrisisline.net', id: '2' },
 { title: 'Mental Health Government Website', website_uri:'https://www.mentalhealth.gov', id: '3' },
 { title: 'Behavioral Health Treatment Services Locator', website_uri:'https://findtreatment.samhsa.gov', id: '4' },
   ]);
-
-const getWebView = (website_uri) =>{
-  return( <WebView
-    source={{ uri: website_uri }}
-    />
-  )
-}
 
   return (
     <View style={styles.container}>
@@ -29,7 +22,10 @@ const getWebView = (website_uri) =>{
         keyExtractor={(item) => item.id}
         data={options}
         renderItem={({ item }) => 
-        <TouchableOpacity onPress={() => getWebView(item.website_uri)}>
+        <TouchableOpacity onPress={() => navigation.navigate('Support Details', {
+          website_uri: item.website_uri
+        }
+        )}>
           <Text style={styles.options}>{item.title}</Text>
         </TouchableOpacity>
         }

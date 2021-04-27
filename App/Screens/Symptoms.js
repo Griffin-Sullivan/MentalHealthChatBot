@@ -1,8 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-native';
-
-import Metrics from '../Themes/Metrics'
-import Navigator from '../Navigation/Navigator';
+import Metrics from '../Themes/Metrics';
 
 
 export default function App({ route, navigation }) {
@@ -10,90 +8,90 @@ export default function App({ route, navigation }) {
   return (
     <View style={styles.container}> 
       <ScrollView style={styles.symptomsContainer}>
-        <TouchableOpacity onPress={()=> navigation.navigate('SymptomDetails', {
-          external: true,
-          videoURL: 'https://youtu.be/MB5IX-np5fE', 
+        <TouchableOpacity onPress={() => navigation.navigate('Severity Slider', {
+          videoURL: 'https://www.youtube.com/watch?v=MB5IX-np5fE',
+          symptom: 'anxiety'
         }
         )}>
           <View style={styles.symptomsInnerContainer}>
             <Text style={styles.symptom}>Persistent sad, anxious, or "empty" mood</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={()=> navigation.navigate('SymptomDetails', {
-          external: true,
-          videoURL: 'https://youtu.be/6P2nPI6CTlc', 
+        <TouchableOpacity onPress={() => navigation.navigate('Severity Slider', {
+          videoURL: 'https://youtu.be/6P2nPI6CTlc',
+          symptom: 'hopelessness'
         }
         )}>
           <View style={styles.symptomsInnerContainer}>
             <Text style={styles.symptom}>Feelings of hopelessness</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={()=> navigation.navigate('SymptomDetails', {
-          external: true,
-          videoURL: 'https://youtu.be/p-at-yS6eaU', 
+        <TouchableOpacity onPress={() => navigation.navigate('Severity Slider', {
+          videoURL: 'https://youtu.be/p-at-yS6eaU',
+          symptom: 'guilt'
         }
         )}>
           <View style={styles.symptomsInnerContainer}>
             <Text style={styles.symptom}>Feelings of guilt</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={()=> navigation.navigate('SymptomDetails', {
-          external: true,
-          videoURL: 'https://youtu.be/EtphOKEOHaI', 
+        <TouchableOpacity onPress={() => navigation.navigate('Severity Slider', {
+          videoURL: 'https://youtu.be/EtphOKEOHaI',
+          symptom: 'loss of interest in hobbies'
         }
         )}>
           <View style={styles.symptomsInnerContainer}>
             <Text style={styles.symptom}>Loss of interest in hobbies and activities</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={()=> navigation.navigate('SymptomDetails', {
-          external: true,
-          videoURL: 'https://youtu.be/CDvnw8eOjFQ', 
+        <TouchableOpacity onPress={() => navigation.navigate('Severity Slider', {
+          videoURL: 'https://youtu.be/CDvnw8eOjFQ',
+          symptom: 'fatigue'
         }
         )}>
           <View style={styles.symptomsInnerContainer}>
             <Text style={styles.symptom}>Decreased energy and fatigue</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={()=> navigation.navigate('SymptomDetails', {
-          external: true,
-          videoURL: 'https://youtu.be/Hu4Yvq-g7_Y', 
+        <TouchableOpacity onPress={() => navigation.navigate('Severity Slider', {
+          videoURL: 'https://youtu.be/Hu4Yvq-g7_Y',
+          symptom: 'difficulty to concentrate'
         }
         )}>
           <View style={styles.symptomsInnerContainer}>
             <Text style={styles.symptom}>Difficulty concentrating</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={()=> navigation.navigate('SymptomDetails', {
-          external: true,
-          videoURL: 'https://youtu.be/j5Sl8LyI7k8', 
+        <TouchableOpacity onPress={() => navigation.navigate('Severity Slider', {
+          videoURL: 'https://youtu.be/j5Sl8LyI7k8',
+          symptom: 'insomnia'
         }
         )}>
           <View style={styles.symptomsInnerContainer}>
             <Text style={styles.symptom}>Insomnia</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={()=> navigation.navigate('SymptomDetails', {
-          external: true,
-          videoURL: 'https://youtu.be/Ssr2UDB9EWQ', 
+        <TouchableOpacity onPress={() => navigation.navigate('Severity Slider', {
+          videoURL: 'https://youtu.be/Ssr2UDB9EWQ',
+          symptom: 'problem with your appetite'
         }
         )}>
           <View style={styles.symptomsInnerContainer}>
             <Text style={styles.symptom}>Problems with appetite</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={()=> navigation.navigate('SymptomDetails', {
-          external: true,
-          videoURL: 'https://youtu.be/EfcXS8MUivo', 
+        <TouchableOpacity onPress={() => navigation.navigate('Severity Slider', {
+          videoURL: 'https://youtu.be/EfcXS8MUivo',
+          symptom: 'your suicidal thought'
         }
         )}>
           <View style={styles.symptomsInnerContainer}>
             <Text style={styles.symptom}>Suicidal thoughts</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={()=> navigation.navigate('SymptomDetails', {
-          external: true,
-          videoURL: 'https://youtu.be/v-t1Z5-oPtU', 
+        <TouchableOpacity onPress={() => navigation.navigate('Severity Slider', {
+          videoURL: 'https://youtu.be/v-t1Z5-oPtU',
+          symptom: 'physical symptom'
         }
         )}>
           <View style={styles.symptomsInnerContainer}>

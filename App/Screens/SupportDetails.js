@@ -5,13 +5,13 @@ import WebView from 'react-native-webview';
 
 
 export default function App({ route, navigation }) {
-  const { videoURL } = route.params;
+  const { website_uri } = route.params;
 
 
   return(
     <View style={styles.container}>
       <WebView 
-        source={{ uri: videoURL }}
+        source={{ uri: website_uri }}
         />
     </View>
   )

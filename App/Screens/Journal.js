@@ -3,6 +3,8 @@ import { StyleSheet, Text, View, TextInput, KeyboardAvoidingView, TouchableOpaci
 import Metrics from '../Themes/Metrics';
 import Entries from '../Components/Entries';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Header } from 'react-navigation-stack';
+import { useHeaderHeight } from '@react-navigation/stack';
 
 export default function App({ route, navigation }) {
   const [entry, setEntry] = useState('');
@@ -57,6 +59,7 @@ export default function App({ route, navigation }) {
         <KeyboardAvoidingView 
           style={styles.inputContainer} 
           behavior="padding"
+          keyboardVerticalOffset = {useHeaderHeight()}
         >
           <TextInput
             placeholder="What's on your mind today?"

@@ -8,7 +8,9 @@ import Chat from '../Screens/Chat';
 import Symptoms from '../Screens/Symptoms';
 import SymptomDetails from '../Screens/SymptomDetails'; 
 import Support from '../Screens/Support';
-import Journal from '../Screens/Journal'
+import Journal from '../Screens/Journal';
+import SupportDetails from '../Screens/SupportDetails';
+import Slider from '../Screens/Slider';
 
 const ChatStack = createStackNavigator();
 
@@ -36,6 +38,7 @@ function SymptomsStackScreen() {
   return (
     <SymptomStack.Navigator>
       <SymptomStack.Screen name="Symptoms" component={Symptoms} />
+      <SymptomStack.Screen name="Severity Slider" component={Slider} />
       <SymptomStack.Screen name="Details" component={SymptomDetails} />
     </SymptomStack.Navigator>
   );
@@ -47,6 +50,7 @@ function SupportStackScreen() {
   return (
     <SupportStack.Navigator>
       <SupportStack.Screen name="Support" component={Support} />
+      <SupportStack.Screen name="Support Details" component={SupportDetails} />
     </SupportStack.Navigator>
   );
 }
