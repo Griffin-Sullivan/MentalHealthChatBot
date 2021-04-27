@@ -1,12 +1,55 @@
 import * as React from 'react';
 import { NavigationContainer, StackActions } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
 import { Ionicons } from '@expo/vector-icons';
+
 import Chat from '../Screens/Chat';
-import Symptoms from '../Screens/Symptoms'; 
+import Symptoms from '../Screens/Symptoms';
+import SymptomDetails from '../Screens/SymptomDetails'; 
 import Support from '../Screens/Support';
 import Journal from '../Screens/Journal'
 
+const ChatStack = createStackNavigator();
+
+function ChatStackScreen() {
+  return (
+    <ChatStack.Navigator>
+      <ChatStack.Screen name="Chat" component={Chat} />
+    </ChatStack.Navigator>
+  );
+}
+
+const JournalStack = createStackNavigator();
+
+function JournalStackScreen() {
+  return (
+    <JournalStack.Navigator>
+      <JournalStack.Screen name="Journal" component={Journal} />
+    </JournalStack.Navigator>
+  );
+}
+
+const SymptomStack = createStackNavigator();
+
+function SymptomsStackScreen() {
+  return (
+    <SymptomStack.Navigator>
+      <SymptomStack.Screen name="Symptoms" component={Symptoms} />
+      <SymptomStack.Screen name="Details" component={SymptomDetails} />
+    </SymptomStack.Navigator>
+  );
+}
+
+const SupportStack = createStackNavigator();
+
+function SupportStackScreen() {
+  return (
+    <SupportStack.Navigator>
+      <SupportStack.Screen name="Support" component={Support} />
+    </SupportStack.Navigator>
+  );
+}
 
 const Tab = createBottomTabNavigator();
 
@@ -36,10 +79,10 @@ export default function Navigator() {
                     style: { height: '8%', paddingTop: '1%', paddingBottom: '1%' }
                 }}
             > 
-                <Tab.Screen name="Chat" component={Chat}/>
-                <Tab.Screen name="Journal" component={Journal} />
-                <Tab.Screen name="Manage Symptoms" component={Symptoms}/>
-                <Tab.Screen name="Support" component={Support}/>
+                <Tab.Screen name="Chat" component={ChatStackScreen}/>
+                <Tab.Screen name="Journal" component={JournalStackScreen} />
+                <Tab.Screen name="Manage Symptoms" component={SymptomsStackScreen}/>
+                <Tab.Screen name="Support" component={SupportStackScreen}/>
             </Tab.Navigator>
         </NavigationContainer>
     );
