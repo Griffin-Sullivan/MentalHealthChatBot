@@ -22,7 +22,9 @@ function ChatStackScreen() {
         name="Chat"
         component={Chat}
         options={{
-            backgroundColor: '#EAECC6'
+           headerStyle: {
+            backgroundColor: '#EAECC6',
+          },
         }}
       />
     </ChatStack.Navigator>
@@ -38,10 +40,9 @@ function JournalStackScreen() {
         name="Journal"
         component={Journal}
         options={{
-            title: 'Journal',
-            fontSize: 14,
-            fontWeight: 'bold',
-            backgroundColor: '#FFF'
+           headerStyle: {
+            backgroundColor: '#EAECC6',
+          },
         }}
       />
     </JournalStack.Navigator>
@@ -57,30 +58,27 @@ function SymptomsStackScreen() {
         name="Symptoms"
         component={Symptoms}
         options={{
-            title: 'Symptoms',
-            fontSize: 14,
-            fontWeight: 'bold',
-            backgroundColor: '#FFF'
+          headerStyle: {
+            backgroundColor: '#fe85b0',
+          },
         }}
       />
       <SymptomStack.Screen
         name="Severity Slider"
         component={Slider}
         options={{
-            title: 'Severity Slider',
-            fontSize: 14,
-            fontWeight: 'bold',
-            backgroundColor: '#EAECC6'
+           headerStyle: {
+            backgroundColor: '#EAECC6',
+          },
         }}
       />
       <SymptomStack.Screen
         name="Details"
         component={SymptomDetails}
         options={{
-            title: 'Details',
-            fontSize: 14,
-            fontWeight: 'bold',
-            backgroundColor: '#FFF'
+          headerStyle: {
+            backgroundColor: '#FFF',
+          },
         }}
       />
     </SymptomStack.Navigator>
@@ -96,20 +94,18 @@ function SupportStackScreen() {
         name="Support"
         component={Support}
         options={{
-            title: 'Support',
-            fontSize: 14,
-            fontWeight: 'bold',
-            backgroundColor: '#FFF'
+          headerStyle: {
+            backgroundColor: '#fe85b0',
+          },
         }}
       />
       <SupportStack.Screen
         name="Support Details"
         component={SupportDetails}
         options={{
-            title: 'Support Details',
-            fontSize: 14,
-            fontWeight: 'bold',
-            backgroundColor: '#FFF'
+          headerStyle: {
+            backgroundColor: '#fff',
+          },
         }}
       />
     </SupportStack.Navigator>

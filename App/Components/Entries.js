@@ -21,7 +21,7 @@ export default function Entries(props) {
                     <Text style={styles.date}>{item.date}</Text>
                 </View>
                 <View style={styles.entry}>
-                    <Text>{item.entry}</Text>
+                    <Text style={{fontSize: 14}}>{item.entry}</Text>
                 </View>
             </GestureRecognizer>
         }

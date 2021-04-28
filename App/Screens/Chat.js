@@ -6,19 +6,6 @@ import { LinearGradient } from 'expo-linear-gradient';
 import Colors from '../Themes/Colors';
 import Metrics from '../Themes/Metrics';
 
-const customtInputToolbar = (props) => {
-  return (
-    <InputToolbar
-      {...props}
-      containerStyle={{
-        backgroundColor: 'rgba(43, 192, 228, 1)',
-        borderTopColor: '#E8E8E8',
-        borderTopWidth: 1,
-        padding: 8,
-      }}
-    />
-  );
-};
 
 export default function App({ route, navigation }) {
   const [messages, setMessages] = useState([]);
