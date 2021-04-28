@@ -2,8 +2,7 @@ import  React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, TextInput, KeyboardAvoidingView, TouchableOpacity } from 'react-native';
 import Metrics from '../Themes/Metrics';
 import Entries from '../Components/Entries';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Header } from 'react-navigation-stack';
+import AsyncStorage from '@react-native-community/async-storage';
 import { useHeaderHeight } from '@react-navigation/stack';
 
 export default function App({ route, navigation }) {
