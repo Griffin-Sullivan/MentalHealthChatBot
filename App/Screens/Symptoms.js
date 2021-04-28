@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
   },
   symptomsInnerContainer: {
     flexDirection: 'column',
-    alignItems: 'left',
+    alignItems: 'flex-start',
     justifyContent: 'center',
     paddingHorizontal: 5,
     height: 100,
