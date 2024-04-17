@@ -1,3 +1,5 @@
+## NOTE: This is outdated so the demo below will not run without some manual updates
+
 # MentalHealthChatBot
 The MentalHealthChatBot is a prototype mobile app for supporting people with mental health symptoms related to anxiety and depression. Our app supports 4 main use cases:
 
